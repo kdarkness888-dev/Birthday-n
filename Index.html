@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday Pratiksha 💕</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffd6e5;--bg2:#ffc2d9;--ink:#7a2650;--pink:#ff7eb3;--card:#fff5f9;--soft:#ffe6f0;--btn-ink:#ffffff;color-scheme:light}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#ffd6e5;--bg2:#ffc2d9;--ink:#7a2650;--card:#fff5f9}}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:radial-gradient(circle at 20% 10%,var(--soft),var(--bg) 45%,var(--bg2));font-family:'Baloo 2',system-ui,sans-serif;color:var(--ink);overflow-x:hidden;
+padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+.float{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.float span{position:absolute;bottom:-40px;animation:rise linear infinite;opacity:.85}
+@keyframes rise{to{transform:translateY(-115vh) rotate(25deg)}}
+main{position:relative;z-index:2;min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
+.cake{font-size:84px;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px) rotate(-4deg)}}
+h1{font-size:clamp(28px,8vw,46px);font-weight:800;margin:8px 0 4px}
+.sub{font-family:'Caveat',cursive;font-size:26px;margin:0 0 28px}
+button{font:700 20px 'Baloo 2',sans-serif;color:var(--btn-ink);background:linear-gradient(135deg,#ff7eb3,#ff5c9d);border:0;border-radius:999px;padding:16px 34px;cursor:pointer;box-shadow:0 8px 0 #e0457f,0 14px 24px rgba(224,69,127,.35);transition:transform .15s,box-shadow .15s}
+button:active{transform:translateY(6px);box-shadow:0 2px 0 #e0457f}
+button:focus-visible{outline:4px solid #7a2650;outline-offset:4px}
+#card{display:none;max-width:460px;background:var(--card);border-radius:28px;padding:28px 24px;box-shadow:0 18px 40px rgba(255,126,179,.45);border:3px dashed #ffb3d1;animation:pop .6s cubic-bezier(.2,1.6,.4,1)}
+@keyframes pop{from{transform:scale(.3) rotate(-8deg);opacity:0}}
+#card h2{font-size:clamp(26px,7vw,36px);font-weight:800;margin:0 0 4px;line-height:1.15}
+#card .nick{font-family:'Caveat',cursive;font-size:28px;margin:0 0 14px}
+#card p{font-size:18px;line-height:1.55;margin:12px 0}
+.mr{font-size:19px;font-weight:700}
+.hearts{font-size:26px;letter-spacing:4px;margin-top:10px}
+@media (prefers-reduced-motion:reduce){.float span,.cake{animation:none}}
+</style>
+</head>
+<body>
+<div class="float" id="float" aria-hidden="true"></div>
+<main>
+  <section id="intro">
+    <div class="cake">🎂</div>
+    <h1>Ek chhota sa surprise 💕</h1>
+    <p class="sub">sirf tumhare liye, Pratiksha</p>
+    <button id="go">Click here for surprise 🎁</button>
+  </section>
+
+  <section id="card" aria-live="polite">
+    <div style="font-size:40px">🎉💖🎀</div>
+    <h2>HAPPY BIRTHDAY PRATIKSHA 💗</h2>
+    <p class="nick">(VANSHU)</p>
+    <p>Aapka day, year bohot achha jaye ✨</p>
+    <p class="mr">Tu khup chhaan friend aahe maazi 🌸</p>
+    <p>Isse jyada Marathi sochna padega, sikh lunga 🤔😄</p>
+    <p>Baaki jo bhi ho, ye din ek baar aata hai, par khushiyan hum roz mana sakte hain 💕 bas sahi insaan saath hona chahiye.</p>
+    <p>Aur tum wahi sahi insaan ho 🫶</p>
+    <div class="hearts">💕🩷💞🩷💕</div>
+  </section>
+</main>
+<script>
+(function(){
+  var f=document.getElementById('float'),em=['💕','💖','🩷','💗','🎀','✨','🌸'];
+  function make(n){for(var i=0;i<n;i++){var s=document.createElement('span');
+    s.textContent=em[Math.floor(Math.random()*em.length)];
+    s.style.left=Math.random()*100+'%';
+    s.style.fontSize=(16+Math.random()*26)+'px';
+    s.style.animationDuration=(7+Math.random()*9)+'s';
+    s.style.animationDelay=(-Math.random()*12)+'s';
+    f.appendChild(s);}}
+  make(22);
+  document.getElementById('go').addEventListener('click',function(){
+    document.getElementById('intro').style.display='none';
+    document.getElementById('card').style.display='block';
+    make(18);
+  });
+})();
+</script>
+</body>
+</html>
